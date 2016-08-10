@@ -325,12 +325,12 @@
         };
 
         var isKeyTypeSequence = function (skey) {
-          var seqKeys = ['command', 'links', 'external_links', 'ports', 'expose', 'volumes', 'volumes_from', 'environment', 'env_file', 'dns', 'cap_add', 'cap_drop', 'dns_search', 'labels'];
+          var seqKeys = ['command', 'links', 'external_links', 'ports', 'expose', 'volumes', 'volumes_from', 'environment', 'env_file', 'dns', 'cap_add', 'cap_drop', 'dns_search', 'labels', 'roles', 'extra_hosts', 'tags'];
           return lodash.includes(seqKeys, skey);
         };
 
         var isKeyTypeString = function (skey) {
-          var stringKeys = ['image', 'build', 'net', 'pid', 'working_dir', 'entrypoint', 'user', 'hostname', 'domainname', 'mac_address', 'mem_limit', 'memswap_limit', 'privileged', 'restart', 'stdin_open', 'tty', 'cpu_shares', 'cpuset', 'read_only', 'volume_driver'];
+          var stringKeys = ['image', 'build', 'net', 'pid', 'working_dir', 'entrypoint', 'user', 'hostname', 'domainname', 'mac_address', 'mem_limit', 'memswap_limit', 'privileged', 'restart', 'stdin_open', 'tty', 'cpu_shares', 'cpuset', 'read_only', 'volume_driver', 'autodestroy', 'autoredeploy', 'cgroup_parent', 'devices', 'security_opt', 'sequential_deployment', 'target_num_containers'];
           return lodash.includes(stringKeys, skey);
         };
 
